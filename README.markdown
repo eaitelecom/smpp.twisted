@@ -1,4 +1,4 @@
-SMPP 3.4 client built on Twisted
+SMPP 3.4 client built on Twisted + patches from https://github.com/jookies/jasmin
 
 http://www.nowsms.com/discus/messages/1/24856.html
 

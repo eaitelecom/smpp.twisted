@@ -128,7 +128,6 @@ class SMPPClientService(service.Service):
     def __init__(self, smppClient):
         self.client = smppClient
         self.stopDeferred = defer.Deferred()
-        self.log = logging.getLogger(LOG_CATEGORY)
         
     def getStopDeferred(self):
         return self.stopDeferred
