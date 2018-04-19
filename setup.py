@@ -22,7 +22,6 @@ setup(
     zip_safe = False,   
     install_requires = [
         'twisted',
-        'enum',
         'pyOpenSSL',
         'smpp.pdu',
     ],
