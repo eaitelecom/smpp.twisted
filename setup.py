@@ -23,8 +23,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'twisted',
-        'pyOpenSSL',
-        'git+https://github.com/eaitelecom/smpp.pdu.git',
+        'pyOpenSSL'
     ],
     tests_require=[
         'mock',
