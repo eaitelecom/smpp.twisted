@@ -14,7 +14,8 @@ Copyright 2009-2010 Mozes, Inc.
    limitations under the License.
 """
 
-import struct, logging, StringIO, binascii
+import struct, logging, binascii
+from io import StringIO
 from smpp.pdu.enum import Enum
 
 from smpp.pdu.namedtuple import namedtuple
