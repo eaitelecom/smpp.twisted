@@ -27,7 +27,6 @@ from smpp.pdu.error import *
 from twisted.internet import protocol, defer, reactor
 from twisted.internet.defer import inlineCallbacks
 from twisted.cred import error
-import exceptions
 
 
 LOG_CATEGORY="smpp.twisted.protocol"
