@@ -23,7 +23,6 @@ from smpp.pdu.operations import *
 from smpp.pdu.pdu_encoding import PDUEncoder
 from smpp.pdu.pdu_types import PDURequest, PDUResponse, PDUDataRequest, CommandStatus
 from smpp.pdu.error import *
-from smpp.pdu.constants import command_status_name_map
 
 from twisted.internet import protocol, defer, reactor
 from twisted.internet.defer import inlineCallbacks
@@ -53,8 +52,8 @@ SMPPOutboundTxnResult = namedtuple('SMPPOutboundTxnResult', 'smpp, request, resp
 def _safelylogOutPdu(content):
     try:
         return binascii.b2a_hex(content)
-    except exceptions.UnicodeEncodeError:
-        return "Couldn't log out the pdu content due to non-ascii characters."
+    except UnicodeEncodeError as e:
+        return f"Couldn't log out the pdu content due to non-ascii characters. {e}"
 
 
 class DataHandlerResponse(object):
